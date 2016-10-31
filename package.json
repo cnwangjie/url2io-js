@@ -1,0 +1,26 @@
+{
+  "name": "url2io",
+  "version": "1.0.0",
+  "description": "A SDK for URL2io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnwangjie/url2io-js.git"
+  },
+  "keywords": [
+    "url2io",
+    "SDK"
+  ],
+  "author": "Wang Jie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cnwangjie/url2io-js/issues"
+  },
+  "homepage": "https://github.com/cnwangjie/url2io-js#readme",
+  "dependencies": {
+    "request": "^2.76.0"
+  }
+}
