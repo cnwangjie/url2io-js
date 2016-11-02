@@ -1,8 +1,8 @@
 var request = require('request');
 
-var url2io = function(token, url = null, callback = null, fields = []) {
+var url2io = function(token) {
     this.token = token;
-    this.handle = function(url, callback, fields = []) {
+    this.article = function(url, fields, callback) {
         request({
             method: 'GET',
             uri: 'http://api.url2io.com/article',
@@ -15,9 +15,6 @@ var url2io = function(token, url = null, callback = null, fields = []) {
         function(error, res, body) {
             callback(JSON.parse(body));
         });
-    }
-    if (url!=null && callback!=null) {
-        this.handle(url, callback, fields);
     }
 }
 

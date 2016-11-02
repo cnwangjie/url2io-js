@@ -10,16 +10,14 @@ URL2io node.js SDK
 ### 使用说明
 
 #### npm安装
-    npm install cnwangjie/url2io
+    npm install url2io
 
 #### 使用
 
 ```js
 var url2io = require('url2io');
-url2io(token, url, callback, fields);
-// 回调函数只有一个参数即服务器返回的json所构成的对象
 
 var t = new url2io(token);
-t.handle(url, callback, fields);
-// 实例化后可以使用该对象的handle方法进行处理
+t.article(url, fields, callback);
+// 回调函数的唯一一个参数为api返回的json构成的对象
 ```
