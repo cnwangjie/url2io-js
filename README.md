@@ -15,9 +15,7 @@ URL2io node.js SDK
 #### 使用
 
 ```js
-var url2io = require('url2io');
-
-var t = new url2io(token);
-t.article(url, fields, callback);
+let url2io = require('url2io')('demo'); // 实际这里的demo为你的token
+url2io.article(url, fields, callback);
 // 回调函数的唯一一个参数为api返回的json构成的对象
 ```

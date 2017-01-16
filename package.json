@@ -1,10 +1,10 @@
 {
   "name": "url2io",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A SDK for URL2io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",

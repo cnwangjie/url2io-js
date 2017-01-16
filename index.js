@@ -1,13 +1,24 @@
 var request = require('request');
 
-var url2io = function(token) {
-    this.token = token;
+function url2io(token) {
+    if (!(this instanceof url2io)) {
+        return new url2io(token)
+    }
+
+    if (token) {
+        this.uri = 'http://api.url2io.com/article';
+        this.token = token;
+    } else {
+        this.uri = 'http://api.url2io.com/demo/article';
+        this.token = 'demo';
+    }
+
     this.article = function(url, fields, callback) {
         request({
             method: 'GET',
-            uri: 'http://api.url2io.com/article',
+            uri: this.uri,
             qs: {
-                token: token,
+                token: this.token,
                 url: url,
                 fields: fields.join(',')
             }
